@@ -1,0 +1,141 @@
+<html>
+    <link rel="styleSheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Donate Page</title>
+   <style>
+        #navBar
+        {
+            width: 150%;
+            background-color: rgb(128, 91, 208);
+            color: rgb(0, 0, 0);
+            margin-left: -0.6%;
+            margin-top: -0.8%;
+
+        }
+
+        #navBar a
+        {
+            color: rgb(0, 0, 0);
+            font-size: xx-large;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            margin-bottom: 6;
+            padding-left: 90px;
+            padding-right: 90px;
+            text-decoration: none;
+            display: inline-block;
+            list-style-type: none;
+            position: relative;
+        }
+        #navBar a:hover
+        {
+            background-color: rgb(86, 51, 163);
+            text-decoration: underline;
+        }
+        #navBar a
+        {
+            background-color: rgb(137, 153, 213);
+        }
+        #body{
+        margin:0;
+        padding:0;
+        overflow:hidden;
+        background-color:#77dd77;
+}
+        #circle{
+        position:absolute;
+        transform:translate(-102%,-102%);
+        height:5px;
+        width:5px;
+        border-radius:50%;
+        border:2px solid black;
+        }
+        #paymentOption{
+            font-size: x-large;
+            margin-left:15%;
+        }
+        #paymentAmount{
+            margin-left: 45%;
+            margin-top: -16.4%;
+            margin-bottom: -10;
+            font-size: x-large;
+
+        }
+        #Button4
+           {
+               background-color: rgb(25, 168, 96);
+               color: white;
+               text-decoration: none;
+               margin-left:15%;
+               margin-top: 3%;
+               margin-bottom:0%;
+               width: 950px;
+               height:100px;
+               
+           }
+    </style>
+
+<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script>
+
+<body>
+<div id="navBar">
+<h1>Poverty and Health and Wellbeing, how do they affect us?</h1>
+<a href="CodingWebsiteHomePage.html" target = ""><i class=" fa fa-fw fa-home"></i> Home</a>
+<a href="CodingWebsitePovertyPage.html" target = ""><i class="fa fa-book"></i> Poverty</a>
+<a href="CodingWebsiteH&WPage.html" target = ""><i class="fa fa-book"></i> Health and Wellbeing</a>
+<a href="" target = ""><i class="fa fa-dollar"></i> Donate!</a>
+</div>
+<div id>
+
+</div>
+
+
+
+    <canvas id="myCanvas" width="1420" height="205">
+    </canvas>
+
+    <div id="circle"></div>
+    <div id = "paymentOption">
+        <h3>Input card number here...</h3>
+        <p id="myP" contenteditable="true">16 digits</p>
+        <h3>Input expiration date here...</h3>
+        <p id="myP" contenteditable="true">yy/mm/dd</p>
+    </div>
+    <div id = "paymentAmount">
+        <h3>How much would you like to donate?...</h3>
+        <p id="myP" contenteditable="true">In USD</p>
+        <h3>What cause would you like to Donate to?</h3>
+        <p id="myP" contenteditable="true">Health & Wellbeing or Poverty</p>
+    </div>
+    <div class="Button4">
+        <button id = "Button4" onClick ="window.location.reload();submit()">
+            Submit your choices!
+        </button>
+    </div>
+   
+
+
+    <script>
+        var t = document.getElementById("myCanvas");
+        var ctx = t.getContext("2d");
+        ctx.font = "25px Arial";
+        ctx.fillText("To Donate, simply input your payment card details in the boxes below!", 320, 120);
+        ctx.fillText("After that, just input how much you want to pay!", 420, 160);
+
+        let circle = document.getElementById('circle');
+        const onMouseMove = (e) =>{
+        circle.style.left = e.pageX + 'px';
+        circle.style.top = e.pageY + 'px';
+        }
+        document.addEventListener('mousemove', onMouseMove);
+        
+    </script>
+    <script>
+        function submit() {
+            alert: "s"
+            alert("Thank you for submitting!");
+            
+        };
+    </script>
+
+</html>
+
